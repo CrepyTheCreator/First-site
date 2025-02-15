@@ -357,6 +357,7 @@
 }
 
 .cifra-title {
+  padding-left: 10px;
   grid-area: title;
 }
 
