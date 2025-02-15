@@ -106,3 +106,14 @@ document.getElementById('popupDialog').addEventListener('click', function(event)
   let popup = document.getElementById('popupDialog');
   popup.style.display = 'none';
 });
+
+function openPopupProfile() {
+  document.getElementById('popupProfile').style.display = 'flex';
+}
+
+function closePopupProfile(event) {
+  let popup = document.querySelector('.popup');
+  if (!event || event.target === document.getElementById('popupProfile')) {
+      document.getElementById('popupProfile').style.display = 'none';
+  }
+}

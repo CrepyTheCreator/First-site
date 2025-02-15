@@ -22,7 +22,7 @@
         <span class="logo-text">ocenka.ru</span>
       </div>
       <div class="header-content">
-        <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;">
+        <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
           <img src="./svg/Vector.svg" alt="Иконка профиля">
         </button>
         <nav class="header-menu" style="grid-area: menu;">
@@ -45,7 +45,7 @@
               <span class="header-hours">с 9:30 до 18:30 по Мск</span>
             </li>
             <li class="header-menu-profile">
-              <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;">
+              <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
                 <img src="./svg/Vector.svg" alt="Иконка профиля">
                 <span class="profile-text">Личный кабинет</span>
               </button>
@@ -753,6 +753,19 @@
           </div>
         </div>
       </section>
+      <popup class="popupPro" id="popupProfile">
+        <div class="popupProfile">
+          <button class="popupPro-close" onclick="closePopupProfile()">✖</button>
+          <h2>Вход в ваш аккаунт</h2>
+          <form class="popup-form">
+            <span>Логин:</span>
+            <input type="email" placeholder="example@gmail.com" class="input">
+            <span>Пороль:</span>
+            <input type="password" placeholder="********" class="input">
+            <button type="submit" class="button-style popup-profile-btn" onclick="closePopupProfile()"><span>Подтвердить</span></button>
+          </form>
+        </div>
+      </popup>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/script.js"></script>
