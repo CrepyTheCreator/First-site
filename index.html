@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Где оценка?</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+  </head>
+  <body class="page" id="page">
+    <header class="header">
+      <div class="header-logo-content" style="grid-area: logo;">
+        <div class="logo">
+          <img src="./svg/Rectangle 11.svg" class="logo-img">
+          <span class="logo-title">gde</span>
+        </div>
+        <span class="logo-text">ocenka.ru</span>
+      </div>
+      <div class="header-content">
+        <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;">
+          <img src="./svg/Vector.svg" alt="Иконка профиля">
+        </button>
+        <nav class="header-menu" style="grid-area: menu;">
+          <button class="menu-btn button-style" onclick="menu()">
+            <img src="./svg/icons-menu/icons8-menu-20.svg">
+          </button>
+          <ul class="header-menu-list" id="menuList">
+            <li class="header-choose header-btn">
+              <button class="choose-btn haeder-btn-active" >Для бизнеса</button>
+              <button class="choose-btn">Для юриста</button>
+            </li>
+            <li class="header-menu-links">
+              <a href="#work" class="link link-top">Услуги</a>
+              <a href="#company" class="link">Компания</a>
+              <a href="#team" class="link">Команда</a>
+              <a href="#contact" class="link">Контакты</a>
+            </li>
+            <li class="header-menu-time">
+              <span class="header-number">8 (800) 600-85-89</span>
+              <span class="header-hours">с 9:30 до 18:30 по Мск</span>
+            </li>
+            <li class="header-menu-profile">
+              <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;">
+                <img src="./svg/Vector.svg" alt="Иконка профиля">
+                <span class="profile-text">Личный кабинет</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="cover">
+        <div class="cover-info">
+          <span class="cover-company">Аккредитованная IT-компания</span>
+          <div class="cover-text">
+            <h1 class="cover-title"><span class="cover-accent">Сервис электронной оценки для юриста – </span>это онлайн-платформа, которая предоставляет инструмент для проведения электронных оценок имущества</h1>
+            <p class="cover-description">Для определения цены иска, вам или вашему клиенту не нужно искать оценочную организацию. Оценку имущества мы берём на себя — вы занимаетесь юридическими вопросами!</p>
+          </div>
+        </div>
+        <div class="cover-video">
+          <video src="#" class="video">
+          </video>
+          <div class="video-atribute">
+            <button class="video-play"><img src="./svg/play/black copy.svg" alt="Кнопка запуска видео"></button>
+            <div class="video-content">
+              <span class="video-info">Смотреть видео</span>
+              <span class="video-length">01:03 мин</span>
+            </div>
+          </div>
+      </section>
+      <section class="product">
+        <h2 class="product-title title">Продукты сервиса электронной оценки</h2>
+        <ul class="product-card-list">
+          <li class="card-product">
+            <div class="card-product-content">
+              <div class="card-product-textarea">
+                <h3 class="product-card-title">Для Юриста</h3>
+                <p class="product-card-text">
+                  Личный кабинет всегда под рукой, когда нужна быстрая 
+                  и точная оценка имущества для юридических нужд, 
+                  ежедневно 24/7 + ваша система мотивации
+                </p>
+              </div>
+              <button class="product-card-btn button-style">Подробнее</button>
+            </div>
+            <img src="./images/lawyer.png" alt="Иконка юриста" class="product-img">
+          </li>
+          <li class="card-product buisness-card">
+            <div class="card-product-content">
+              <div class="card-product-textarea">
+                <h3 class="product-card-title">Для Бизнеса</h3>
+                <p class="product-card-text">
+                  Полноценная интеграция по зашифрованному API в сервисы 
+                  бизнеса, для быстрых управленческих решений. 
+                  Гибкие условия работы. 
+                </p>
+              </div>
+              <button class="product-card-btn button-style">Подробнее</button>
+            </div>
+            <img src="./images/businessman.png" alt="Портфель" class="product-img">
+          </li>
+        </ul>
+        <div class="cifra">
+          <h2 class="cifra-title title">
+            Gde-ocenka.ru<br>
+            <span class="cover-accent cifra-accent">Аккредитованная</span>
+            IT-компания</h2>
+            <div class="card-cifra-box" style="grid-area: box;">
+              <div class="box-content">
+                <h4 class="boxes-title">Наша команда и разрешающие документы</h4>
+              <img src="./images/boxes.png" alt="Коробки" class="cifra-image">
+              </div>
+              <button href="#0" class="button-style cifra-btn"><span>Подробнее</span></button>
+            </div>
+            <div class="swiper-container">
+              <ul class="cifra-card-list swiper-wrapper">
+                <li class="cifra-card swiper-slide" style="grid-area: contor;">
+                  <div class="cifra-content-card">
+                    <span class="cifra-card-text">Более</span>
+                    <span class="cifra-number">3125</span>
+                  </div>
+                  <p class="cifra-card-subtext">С нами Нотариальных контор</p>
+                </li>
+                <li class="cifra-card" style="grid-area: advo;">
+                  <div class="cifra-content-card">
+                    <span class="cifra-card-text">Более</span>
+                    <span class="cifra-number">1500</span>
+                  </div>
+                  <p class="cifra-card-subtext">С нами юристов и адвокатов</p>
+                </li>
+                <li class="cifra-card swiper-slide" style="grid-area: accent;">
+                  <div class="cifra-content-card">
+                    <span class="cifra-card-text">Более</span>
+                    <span class="cifra-number">1 000 000</span>
+                  </div>
+                  <p class="cifra-card-subtext">Сделали точных оценок</p>
+                </li>
+                <li class="cifra-card" style="grid-area: sredn;">
+                  <div class="cifra-content-card">
+                    <span class="cifra-number">1,5</span>
+                    <span class="cifra-card-text">Часа</span>
+                  </div>  
+                  <p class="cifra-card-subtext">Среднее время изготовления оценки</p>
+                </li>
+                <li class="cifra-card swiper-slide" style="grid-area: tochno;">
+                  <div class="cifra-content-card">
+                    <span class="cifra-number">99,9</span>
+                    <span class="cifra-card-text">процентов</span>
+                  </div>
+                  <p class="cifra-card-subtext">Точность оценки</p>
+                </li>
+                <li class="cifra-card" style="grid-area: client;">
+                  <div class="cifra-content-card">
+                    <span class="cifra-card-text">Более</span>
+                    <span class="cifra-number">850 000</span>
+                  </div>
+                  <p class="cifra-card-subtext">Довольных клиентов по стране</p>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
