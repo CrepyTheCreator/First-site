@@ -65,3 +65,44 @@ document.querySelectorAll('.services-btn-list').forEach(button => {
   });
 });
 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  let phone = document.getElementById('phone').value;
+  let name = document.getElementById('name').value;
+  let isChecked = document.getElementById('sub').checked;
+  
+  let phoneError = document.getElementById('phoneError');
+  let nameError = document.getElementById('nameError');
+  
+  phoneError.style.display = phone ? 'none' : 'block';
+  nameError.style.display = name ? 'none' : 'block';
+  
+  if (!phone || !name || !isChecked) {
+    return;
+  }
+  
+  // Здесь можно добавить отправку данных на сервер через fetch/AJAX
+  console.log({ phone, name });
+  
+  let popup = document.getElementById('popupDialog');
+  popup.style.display = 'flex';
+  popup.showModal();
+  
+  document.getElementById('contactForm').reset();
+});
+
+function closePopup() {
+  let popup = document.getElementById('popupDialog');
+  popup.close();
+  popup.style.display = 'none';
+}
+
+
+document.getElementById('popupDialog').addEventListener('click', function(event) {
+  if (event.target === this) {
+      closePopup();
+  }
+  let popup = document.getElementById('popupDialog');
+  popup.style.display = 'none';
+});
