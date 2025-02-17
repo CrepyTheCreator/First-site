@@ -47,6 +47,10 @@
   gap: 11px;
 }
 
+.profile-text-btn {
+  display: none;
+}
+
 .header-profile {
   padding: 17px;
   width: 100%;
@@ -66,6 +70,10 @@
 
 .menu-btn {
   padding: 17px;
+}
+
+.menu-text {
+  display: none;
 }
 
 .header-menu-list {
@@ -423,6 +431,21 @@
   gap: 30px;
 }
 
+.cifra-card-accent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "ocenka sredn"
+    "tochno client";
+  gap: 16px;
+}
+
+.cifra-card-vision {
+  display: none;
+}
+
+
 .cifra-card-text {
   font-size: 20px;
   color: #206BCC;
@@ -474,6 +497,14 @@
   display: grid;
   gap: 21px;
   align-items: end;
+}
+
+.help-card-section {
+  display: none;
+}
+
+.help-choose {
+  display: none;
 }
 
 .help-title {
@@ -536,9 +567,31 @@
   margin-top: 10px;
 }
 
+.services-about {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 20px;
+}
+
 .service-title {
   padding: 0 20px;
   font-size: 22px;
+}
+
+.services-choose {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #F5F6FA;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.serv-btn {
+  width: 100%;
+  padding: 0;
 }
 
 .list-services {
@@ -735,6 +788,10 @@
   outline: none;
   color: #fff;
   max-width: 360px;
+}
+
+.zapis-btn-ini {
+  display: none;
 }
 
 .zapis-text-btn {
@@ -1003,6 +1060,48 @@
   padding-right: 5px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  background-color: #F5F6FA;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-btn {
+  background-color: #e9ecef;
+}
+
+.footer-btn-profile {
+  margin-bottom: 30px;
+}
+
+.footer-menu {
+  display: flex;
+
+}
+
+.footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-police {
+  color: #444557;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+  padding: 24px 0;
+}
+
+
 .popup-form-message {
   display: none;
   flex-direction: column;
@@ -1080,4 +1179,562 @@
   color: #206BCC;
   padding: 15px 0;
   margin-top: 30px;
+}
+
+@media (width >= 768px) {
+  .profile-text-btn,
+  .menu-text {
+    display: block;
+    color: #206BCC;
+  }
+
+  .card-product {
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .card-product-textarea {
+    gap: 40px;
+  }
+  
+  .product-card-title {
+    text-align: start;
+  }
+
+  .product-img {
+    position: relative;
+    width: 260px;
+    left: 0;
+    top: 0;
+  }
+
+  .cifra {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "title contor advo"
+      "accent accent accent"
+      "accent accent accent";
+      gap: 8px;
+  }
+
+  .card-cifra-box {
+    display: none;
+  }
+
+  .cifra-accent {
+    width: 100%;
+  }
+
+  .cifra-card-accent {
+    gap: 8px;
+  }
+
+  .swiper-container {
+    display: none;
+  }
+
+  .cifra-card-vision {
+    display: flex;
+  }
+
+  .help {
+    align-items: center;
+  }
+
+  .help-title-content {
+    display: flex;
+    align-items: start;
+    gap: 0;
+  }
+
+  .swiper-help-menu {
+    display: none;
+  }
+
+  .help-choose {
+    display: flex;
+    background-color: #F5F6FA;
+    padding: 5px;
+    align-items: center;
+    border-radius: 6px;
+    width: 60%;
+    justify-content: center;
+  }
+
+  .help-card-section {
+    display: flex;
+    gap: 100%;
+    position: relative;
+    transform: translateX(21.5%);
+    transition: transform 0.6s ease;
+  }
+
+  .help-card-list {
+    gap: 8px;
+  }
+
+  .help-card {
+    width: clamp(10.93rem, 0.8500rem + 21.0000vw, 19.75rem);
+    min-height: 200px;
+    gap: 10px;
+  }
+
+  .help-card-title {
+    font-size: 16px;
+  }
+
+  .help-card-content {
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .help-card-subtitle {
+    font-size: 15px;
+  }
+
+  .help-card-btn {
+    margin: 0 10px 10px;
+  }
+
+  .vostreb {
+    transform: translateX(-128.5%);
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+  }
+
+  .services-choose {
+    display: flex;
+  }
+
+  .services-btn-list {
+    display: none;
+  }
+
+
+  .list-services {
+    display: none;
+    background-color: transparent;
+    padding-left: 0px;
+    gap: 0;
+  }
+
+  .services-about {
+    padding: 0;
+  }
+
+  .services-card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .services-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    background-color: #F5F6FA;
+    border-radius: 15px;
+    max-width: 316px;
+    margin-bottom: 0;
+  }
+
+  .services-card-img-content {
+    height: auto;
+  }
+
+  .services-content-icon {
+    display: block;
+  }
+
+  .services-content-text {
+    flex-direction: column;
+  }
+
+  .services-content-much {
+    font-size: 14px;
+  }
+
+  .services-content-hour {
+    font-size: 14px;
+  }
+
+  .services-card-display {
+    display: flex;
+  }
+
+  .services-img-name {
+    font-size: 14px;
+    top: 5px;
+    left: 8px;
+    width: 90%;
+  }
+
+  .prosto-card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prosto-card-title {
+    font-size: 20px;
+  }
+
+  .prosto-card-text {
+    font-size: 16px;
+  }
+  .zapis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .zapis-img {
+    max-width: 573px;
+    width: clamp(22rem, 6.2171rem + 32.8810vw, 35.81rem);
+  }
+
+  .result-main {
+    padding: 0 clamp(0.93rem, -2.2800rem + 6.6875vw, 2rem);
+    padding-top: clamp(5rem, -4.0000rem + 18.7500vw, 8rem);
+  }
+
+  .result-main-card-list {
+    margin-top: calc(7.5rem - clamp(0rem, -22.5000rem + 46.8750vw, 6.5rem));
+  }
+
+  .result-main-card-text {
+    font-size: 14px;
+  }
+
+  .result-card-list {
+    flex-direction: row;
+  }
+}
+
+@media (width >= 1024px) {
+  .header-profile,
+  .menu-btn,
+  .profile-text {
+    display: none;
+  }
+
+  .header {
+    padding: var(--padding-main);
+  }
+
+  .header-menu-list {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    flex-direction: row;
+    background-color: transparent;
+    gap: 16px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .header-menu-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header-choose {
+    gap: 2px;
+  }
+  
+  .choose-btn {
+    width: auto;
+  }
+
+  .link,
+  .link-top {
+    border: none;
+    padding: 0;
+  }
+
+  .header-profile-menu {
+    display: flex;
+  }
+
+  .main {
+    gap: 120px;
+  }
+
+  .cover {
+    flex-direction: row;
+    gap: 100px;
+    padding-left: clamp(1.25rem, -5.5192rem + 10.5769vw, 4rem);
+    padding-right: clamp(1.25rem, -5.5192rem + 10.5769vw, 4rem);
+  }
+
+  .cover-info {
+    padding-top: clamp(0rem, -18.4615rem + 28.8462vw, 7.5rem);
+  }
+
+  .cover-video {
+    background-color: #DADADA;
+    width: 100%;
+    height: clamp(23.75rem, -0.8654rem + 38.4615vw, 33.75rem);
+  }
+
+  .video {
+    display: block;
+  }
+
+  .video-atribute {
+    position: absolute;
+    bottom: clamp(0.8rem, -0.1846rem + 1.5385vw, 1.2rem);;
+  }
+
+  .product {
+    padding: var(--padding-main);
+  }
+
+  .product-card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-img {
+    width: 140px;
+  }
+
+  .help {
+    padding: var(--padding-main);
+  }
+
+  .services {
+    padding: var(--padding-main);
+  }
+
+  .cifra {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "title contor advo box"
+        "accent accent accent box"
+        "accent accent accent box";
+    gap: clamp(0.5rem, -0.7308rem + 1.9231vw, 1rem);;
+  }
+
+  .card-cifra-box {
+    display: flex;
+  }
+
+  .box-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .cifra-image {
+    width: 200px;
+    align-self: center;
+  }
+
+  .help-choose {
+    width: auto;
+  }
+
+  .help-card-list {
+    gap: 16px;
+  }
+
+  .help-card {
+    gap: 16px;
+  }
+
+  .help-card-content {
+    padding: 0 15px;
+    gap: 32px;
+  }
+
+  .img-card-help {
+    min-height: 148px;
+  }
+
+  .help-card-btn {
+    margin: 0 15px 20px;
+  }
+
+  .services-img-name {
+    top: 15px;
+    left: 16px;
+  }
+
+  .services-card {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .services-card-list {
+    gap: 16px;
+  }
+
+  .list-services {
+    padding: 0;
+  }
+
+  .services-card-content {
+    background-color: rgba(33, 100, 205, 0.2);
+    padding: 16px;
+  }
+
+  .prosto {
+    padding: var(--padding-main);
+  }
+
+  .prosto-card-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .neprosto-card-content {
+    align-items: center;
+  }
+
+  .zapis {
+    margin: var(--padding-main);
+  }
+
+  .zapis-btn {
+    display: none;
+  }
+
+  .zapis-btn-ini {
+    display: flex;
+  }
+
+  .zapis-text-and {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .zapis-text-content {
+    gap: 32px;
+  }
+
+  .plus {
+    padding: var(--padding-main);
+  }
+
+  .zapis-img {
+    max-width: 440px;
+    margin: auto;
+  }
+
+  .plus-top-line {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .plus-bottom-line {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .form-title {
+    font-size: 16px;
+  }
+
+  .form {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .footer-main {
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .footer-menu-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .footer-btn-profile {
+    margin: 0;
+    width: auto;
+  }
+
+  .result {
+    padding: var(--padding-main);
+  }
+
+  .result-main {
+    max-width: 1440px;
+  }
+
+  .result-icon {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .popup-form-message {
+    width: 25%;
+    left: 25%;
+  }
+
+}
+
+@media (width >= 1338px) {
+  .header-menu-list {
+    gap: 36px;
+  }
+
+  .header-menu-links {
+    gap: 32px;
+  }
+
+  .profile-text {
+    display: block;
+  }
+
+  .help-title {
+    width: 50%;
+  }
+
+  .help-subtitle {
+    width: 50%;
+  }
+
+  .zapis {
+    max-height: 470px;
+  }
+
+  .main-text-content {
+    width: 50%;
+    left: 25%;
+  }
+
+  .result-main-card-list {
+    justify-content: center;
+  }
+
+  .rusult-card-text {
+    width: 60%;
+  }
+
+  .footer-main {
+    gap: 36px;
+    justify-content: space-between;
+  }
+
+  .footer-menu-list {
+    gap: 32px;
+  }
+
 }

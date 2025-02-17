@@ -7,7 +7,21 @@ function menu() {
 
 //переключения между кнопками
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".choose-btn");
+  const buttons = document.querySelectorAll(".header-choose-btn");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      // Убираем класс у всех кнопок
+      buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
+
+      // Добавляем класс только к нажатой кнопке
+      this.classList.add("haeder-btn-active");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".footer-choose-btn");
 
   buttons.forEach(button => {
     button.addEventListener("click", function () {
@@ -117,3 +131,46 @@ function closePopupProfile(event) {
       document.getElementById('popupProfile').style.display = 'none';
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".help-choose .choose-btn");
+  const section = document.querySelector(".help-card-section");
+
+  buttons.forEach(button => {
+      button.addEventListener("click", function () {
+          buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
+          this.classList.add("haeder-btn-active");
+
+          if (this.textContent.trim() === "По месту востребования") {
+              section.classList.add("vostreb");
+          } else {
+              section.classList.remove("vostreb");
+          }
+      });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".serv-btn");
+  const lists = [
+      document.getElementById("first-serv"),
+      document.getElementById("second-serv"),
+      document.getElementById("third-serv")
+  ];
+
+  buttons.forEach((button, index) => {
+      button.addEventListener("click", function () {
+          // Убираем активный класс у всех кнопок
+          buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
+          // Добавляем активный класс к нажатой кнопке
+          this.classList.add("haeder-btn-active");
+
+          // Скрываем все списки
+          lists.forEach(list => list.classList.remove("services-card-display"));
+          // Показываем соответствующий список
+          if (lists[index]) {
+              lists[index].classList.add("services-card-display");
+          }
+      });
+  });
+});

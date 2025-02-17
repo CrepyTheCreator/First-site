@@ -24,15 +24,17 @@
       <div class="header-content">
         <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
           <img src="./svg/Vector.svg" alt="Иконка профиля">
+          <span class="profile-text-btn">Личный кабинет</span>
         </button>
         <nav class="header-menu" style="grid-area: menu;">
           <button class="menu-btn button-style" onclick="menu()">
             <img src="./svg/icons-menu/icons8-menu-20.svg">
+            <span class="menu-text">Меню</span>
           </button>
           <ul class="header-menu-list" id="menuList">
             <li class="header-choose header-btn">
-              <button class="choose-btn haeder-btn-active" >Для бизнеса</button>
-              <button class="choose-btn">Для юриста</button>
+              <button class="choose-btn header-choose-btn haeder-btn-active" >Для бизнеса</button>
+              <button class="choose-btn header-choose-btn">Для юриста</button>
             </li>
             <li class="header-menu-links">
               <a href="#work" class="link link-top">Услуги</a>
@@ -45,7 +47,7 @@
               <span class="header-hours">с 9:30 до 18:30 по Мск</span>
             </li>
             <li class="header-menu-profile">
-              <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
+              <button class="header-profile header-profile-menu button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
                 <img src="./svg/Vector.svg" alt="Иконка профиля">
                 <span class="profile-text">Личный кабинет</span>
               </button>
@@ -64,7 +66,7 @@
           </div>
         </div>
         <div class="cover-video">
-          <video src="#" class="video">
+          <video src="" muted loop class="video">
           </video>
           <div class="video-atribute">
             <button class="video-play"><img src="./svg/play/black copy.svg" alt="Кнопка запуска видео"></button>
@@ -117,6 +119,50 @@
               <img src="./images/boxes.png" alt="Коробки" class="cifra-image">
               </div>
               <button href="#0" class="button-style cifra-btn"><span>Подробнее</span></button>
+            </div>
+            <div class="cifra-card cifra-card-vision" style="grid-area: contor;">
+              <div class="cifra-content-card">
+                <span class="cifra-card-text">Более</span>
+                <span class="cifra-number">3125</span>
+              </div>
+              <p class="cifra-card-subtext">С нами Нотариальных контор</p>
+            </div>
+            <div class="cifra-card cifra-card-vision" style="grid-area: advo;">
+              <div class="cifra-content-card">
+                <span class="cifra-card-text">Более</span>
+                <span class="cifra-number">1500</span>
+              </div>
+              <p class="cifra-card-subtext cifra-card-vision">С нами юристов и адвокатов</p>
+            </div>
+            <div class="cifra-card-accent" style="grid-area: accent;">
+              <div class="cifra-card cifra-card-vision" style="grid-area: ocenka;">
+                <div class="cifra-content-card">
+                  <span class="cifra-card-text">Более</span>
+                  <span class="cifra-number">1 000 000</span>
+                </div>
+                <p class="cifra-card-subtext">Сделали точных оценок</p>
+              </div>
+              <div class="cifra-card cifra-card-vision" style="grid-area: sredn;">
+                <div class="cifra-content-card">
+                  <span class="cifra-number">1,5</span>
+                  <span class="cifra-card-text">Часа</span>
+                </div>  
+                <p class="cifra-card-subtext">Среднее время изготовления оценки</p>
+              </div>
+              <div class="cifra-card cifra-card-vision" style="grid-area: tochno;">
+                <div class="cifra-content-card">
+                  <span class="cifra-number">99,9</span>
+                  <span class="cifra-card-text">процентов</span>
+                </div>
+                <p class="cifra-card-subtext">Точность оценки</p>
+              </div>
+              <div class="cifra-card cifra-card-vision" style="grid-area: client;">
+                <div class="cifra-content-card">
+                  <span class="cifra-card-text">Более</span>
+                  <span class="cifra-number">850 000</span>
+                </div>
+                <p class="cifra-card-subtext">Довольных клиентов по стране</p>
+              </div>
             </div>
             <div class="swiper-container">
               <ul class="cifra-card-list swiper-wrapper">
@@ -171,6 +217,67 @@
         <div class="help-title-content">
           <h2 class="help-title title">Меняйте мир, а мы поможем с электронной оценкой имущества</h2>
           <span class="help-subtitle">Не важно, для каких нужд вам нужна оценка – мы всегда рядом</span>
+        </div>
+        <div class="help-choose">
+          <button class="choose-btn help-btn haeder-btn-active">Нотариальные действия</button>
+          <button class="choose-btn help-btn">По месту востребования</button>
+        </div>
+        <div class="help-card-section">
+          <ul class="help-card-list">
+            <li class="help-card">
+              <img src="./images/Nasled.jpg" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Оценка для вступления в наследство</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">1 час</span></span>
+              </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+            <li class="help-card">
+              <img src="./images/razdel.jpg" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Раздел имущества между супругами</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">1 час</span></span>                </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+            <li class="help-card">
+              <img src="./images/dogovor-cupli.jpg" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Договор купли-продажи</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">1 час</span></span>                </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+            <li class="help-card">
+              <img src="./images/opeka.jpg" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Оценка в органы опеки и попечительства</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">1 час</span></span>                </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+          </ul>
+          <ul class="help-card-list">
+            <li class="help-card">
+              <img src="./images/ocenka-help.png" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Оценка для постановки на баланс компании</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">1 час</span></span>
+              </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+            <li class="help-card">
+              <img src="./images/razdel-bivsh-help.png" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Раздел имущества между бывшими супругами</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">до 2 часов</span></span>                </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+            <li class="help-card">
+              <img src="./images/ocenk-second-help.png" alt="" class="img-card-help">
+              <div class="help-card-content">
+                <h3 class="help-card-title">Оценка для суда</h3>
+                <span class="help-card-subtitle">Время изготовления: <span class="help-card-score">до 2 часов</span></span>                </div>
+              <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
+            </li>
+          </ul>
         </div>
         <div class="swiper-help-menu">
           <h3 class="swiper-title">Нотариальные действия</h3>
@@ -241,9 +348,16 @@
         </div>
       </section>
       <section class="services">
-        <h3 class="title service-title">Наши услуги</h3>
+        <div class="services-about">
+          <h3 class="title service-title">Наши услуги</h3>
+          <div class="services-choose">
+            <button class="choose-btn help-btn serv-btn haeder-btn-active">Недвижимое имущество</button>
+            <button class="choose-btn help-btn serv-btn">Движимое имущество</button>
+            <button class="choose-btn help-btn serv-btn">Активы и аренда</button>
+          </div>
+        </div>
         <div class="list-container">
-          <div class="list-services">
+          <div class="list-services services-card-display" id="first-serv">
             <button class="services-btn-list">
               <span>Недвижимое имущество</span>
               <img src="./svg/service-list.svg">
@@ -329,7 +443,7 @@
               </li>
             </ul>
           </div>
-          <div class="list-services">
+          <div class="list-services" id="second-serv">
             <button class="services-btn-list">
               <span>Движимое имущество</span>
               <img src="./svg/service-list.svg">
@@ -441,7 +555,7 @@
               </li>
             </ul>
           </div>
-          <div class="list-services">
+          <div class="list-services" id="third-serv">
             <button class="services-btn-list">
               <span>Активы и аренда</span>
               <img src="./svg/service-list.svg">
@@ -597,9 +711,12 @@
         </ul>
       </section>
       <section class="zapis">
-        <div class="zapis-text-content">
-          <h2 class="title zapis-title">Получите новый взгляд на электронную оценку имущества</h2>
-          <p class="zapis-text">Начните пользоваться сервисом и получите новый взгляд, как выглядит современная электронная оценка. </p>
+        <div class="zapis-text-and">
+          <div class="zapis-text-content">
+            <h2 class="title zapis-title">Получите новый взгляд на электронную оценку имущества</h2>
+            <p class="zapis-text">Начните пользоваться сервисом и получите новый взгляд, как выглядит современная электронная оценка. </p>  
+          </div>
+          <button class="button-style help-btn zapis-btn zapis-btn-ini"><span>Записаться на <span class="zapis-text-btn">онлайн-</span>консультацию</span></button>
         </div>
         <img src="./images/monitor.png" alt="Монитор" class="zapis-img">
         <button class="button-style help-btn zapis-btn"><span>Записаться на <span class="zapis-text-btn">онлайн-</span>консультацию</span></button>
@@ -753,6 +870,47 @@
           </div>
         </div>
       </section>
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="header-logo-content">
+            <div class="logo">
+              <img src="./svg/Rectangle 11.svg" class="logo-img">
+              <span class="logo-title">gde</span>
+            </div>
+            <span class="logo-text">ocenka.ru</span>
+          </div>
+          <div class="header-choose footer-btn">
+            <button class="choose-btn footer-choose-btn haeder-btn-active" >Для бизнеса</button>
+            <button class="choose-btn footer-choose-btn">Для юриста</button>
+          </div>
+          <nav class="header-menu footer-menu">
+            <ul class="footer-menu-list">
+              <li class="header-menu-item">
+                <span>Услуги</span>
+              </li>
+              <li class="header-menu-item">
+                <span>Компания</span>
+              </li>
+              <li class="header-menu-item">
+                <span>Команда</span>
+              </li>
+              <li class="header-menu-item">
+                <span>Контакты</span>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-time">
+            <span class="header-number">8 (800) 600-85-89<br></span>
+            <span class="header-hours">с 9:30 до 18:30 по Мск</span>
+          </div>
+          <button class="header-profile header-profile-menu button-style footer-btn-profile" onclick="openPopupProfile()">
+            <img src="./svg/Vector.svg" alt="Иконка профиля">
+            <span class="profile-text">Личный кабинет</span>
+          </button>
+        </div>
+        <div class="plus-line"></div>
+        <span class="footer-police">Политика конфиденциальности</span>
+      </footer>
       <popup class="popupPro" id="popupProfile">
         <div class="popupProfile">
           <button class="popupPro-close" onclick="closePopupProfile()">✖</button>
@@ -767,7 +925,7 @@
         </div>
       </popup>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" class="swiper-script"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
