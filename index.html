@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Где оценка?</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -16,19 +16,19 @@
     <header class="header">
       <div class="header-logo-content" style="grid-area: logo;">
         <div class="logo">
-          <img src="./svg/Rectangle 11.svg" class="logo-img">
+          <img src="./svg/Rectangle 11.svg" alt="Иконка сайта" class="logo-img">
           <span class="logo-title">sdk</span>
         </div>
         <span class="logo-text">examp.ru</span>
       </div>
       <div class="header-content">
-        <button class="header-profile button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
+        <button class="header-profile button-style" style="grid-area: profile_btn;" onclick="openPopupProfile()">
           <img src="./svg/Vector.svg" alt="Иконка профиля">
           <span class="profile-text-btn">Личный кабинет</span>
         </button>
         <nav class="header-menu" style="grid-area: menu;">
           <button class="menu-btn button-style" onclick="menu()">
-            <img src="./svg/icons-menu/icons8-menu-20.svg">
+            <img src="./svg/icons-menu/icons8-menu-20.svg" alt="Меню">
             <span class="menu-text">Меню</span>
           </button>
           <ul class="header-menu-list" id="menuList">
@@ -47,7 +47,7 @@
               <span class="header-hours">с 9:30 до 18:30 по Мск</span>
             </li>
             <li class="header-menu-profile">
-              <button class="header-profile header-profile-menu button-style" href="./index.html" style="grid-area: profile_btn;" onclick="openPopupProfile()">
+              <button class="header-profile header-profile-menu button-style" style="grid-area: profile_btn;" onclick="openPopupProfile()">
                 <img src="./svg/Vector.svg" alt="Иконка профиля">
                 <span class="profile-text">Личный кабинет</span>
               </button>
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="cover-video">
-          <video src="" muted loop class="video">
+          <video src="#" muted loop class="video">
           </video>
           <div class="video-atribute">
             <button class="video-play"><img src="./svg/play/black copy.svg" alt="Кнопка запуска видео"></button>
@@ -75,6 +75,7 @@
               <span class="video-length">01:03 мин</span>
             </div>
           </div>
+        </div>
       </section>
       <section class="product">
         <h2 class="product-title title">Продукты сервиса электронной оценки</h2>
@@ -118,7 +119,7 @@
                 <h4 class="boxes-title">Наша команда и разрешающие документы</h4>
               <img src="./images/boxes.png" alt="Коробки" class="cifra-image">
               </div>
-              <button href="#0" class="button-style cifra-btn"><span>Подробнее</span></button>
+              <button class="button-style cifra-btn"><span>Подробнее</span></button>
             </div>
             <div class="cifra-card cifra-card-vision" style="grid-area: contor;">
               <div class="cifra-content-card">
@@ -360,7 +361,7 @@
           <div class="list-services services-card-display" id="first-serv">
             <button class="services-btn-list">
               <span>Недвижимое имущество</span>
-              <img src="./svg/service-list.svg">
+              <img src="./svg/service-list.svg" alt="Иконка">
             </button>
             <ul class="services-card-list">
               <li class="services-card">
@@ -558,12 +559,12 @@
           <div class="list-services" id="third-serv">
             <button class="services-btn-list">
               <span>Активы и аренда</span>
-              <img src="./svg/service-list.svg">
+              <img src="./svg/service-list.svg" alt="Иконка">
             </button>
             <ul class="services-card-list">
               <li class="services-card">
                 <div class="services-card-img-content">
-                  <img src="./images/akcii.png" class="serv-img">
+                  <img src="./images/akcii.png" alt="Иконка" class="serv-img">
                   <span class="services-img-name">Акции</span>
                 </div>
                 <div class="services-card-content">
@@ -856,7 +857,7 @@
                 <div class="checkbox-content">
                   <input type="checkbox" class="custom-checkbox" id="sub" value="yes" checked>
                   <label for="sub"></label>
-                  <p class="checkbox-text">Нажимая на кнопку, вы соглашаетесь с условиями политики конфиденциальности</p>
+                  <p class="checkbox-text">Нажимая на кнопку, вы соглашаетесь с условиями политики конфиденциальности</p>
                 </div>
               </div>
             </form>
@@ -911,19 +912,6 @@
         <div class="plus-line"></div>
         <span class="footer-police">Политика конфиденциальности</span>
       </footer>
-      <popup class="popupPro" id="popupProfile">
-        <div class="popupProfile">
-          <button class="popupPro-close" onclick="closePopupProfile()">✖</button>
-          <h2>Вход в ваш аккаунт</h2>
-          <form class="popup-form">
-            <span>Логин:</span>
-            <input type="email" placeholder="example@gmail.com" class="input">
-            <span>Пороль:</span>
-            <input type="password" placeholder="********" class="input">
-            <button type="submit" class="button-style popup-profile-btn" onclick="closePopupProfile()"><span>Подтвердить</span></button>
-          </form>
-        </div>
-      </popup>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" class="swiper-script"></script>
     <script src="./scripts/script.js"></script>

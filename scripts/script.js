@@ -5,35 +5,31 @@ function menu() {
   document.getElementById("page").classList.toggle("fix");
 }
 
-//переключения между кнопками
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".header-choose-btn");
 
   buttons.forEach(button => {
     button.addEventListener("click", function () {
-      // Убираем класс у всех кнопок
       buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
-
-      // Добавляем класс только к нажатой кнопке
       this.classList.add("haeder-btn-active");
     });
   });
 });
 
+//Переключение кнопок footer
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".footer-choose-btn");
 
   buttons.forEach(button => {
     button.addEventListener("click", function () {
-      // Убираем класс у всех кнопок
       buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
 
-      // Добавляем класс только к нажатой кнопке
       this.classList.add("haeder-btn-active");
     });
   });
 });
 
+//Для карусели карточек
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 8,
@@ -47,38 +43,24 @@ var swiper = new Swiper('.swiper-container', {
   },
 });
 
-var swiper = new Swiper('.swiper-container2', {
-  slidesPerView: 1,
-  spaceBetween: 8,
-  pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-  },
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
-});
-
+//Переключение кнопок services
 document.querySelectorAll('.services-btn-list').forEach(button => {
   button.addEventListener('click', () => {
-      const list = button.nextElementSibling; // Получаем соответствующий список
+      const list = button.nextElementSibling;
 
       if (!list || !list.classList.contains('services-card-list')) return;
 
-      // Если список уже активен, убираем класс
       if (list.classList.contains('services-card-list-active')) {
           list.classList.remove('services-card-list-active');
       } else {
-          // Убираем класс у всех списков
           document.querySelectorAll('.services-card-list').forEach(l => l.classList.remove('services-card-list-active'));
-          // Добавляем класс только соответствующему списку
           list.classList.add('services-card-list-active');
           button.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
   });
 });
 
+//Отправка формы
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault();
   
@@ -95,8 +77,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   if (!phone || !name || !isChecked) {
     return;
   }
-  
-  // Здесь можно добавить отправку данных на сервер через fetch/AJAX
+
   console.log({ phone, name });
   
   let popup = document.getElementById('popupDialog');
@@ -106,13 +87,14 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   document.getElementById('contactForm').reset();
 });
 
+//Оповещение отправки формы
 function closePopup() {
   let popup = document.getElementById('popupDialog');
   popup.close();
   popup.style.display = 'none';
 }
 
-
+//Закрытие окна оповещение кликом по пустой области
 document.getElementById('popupDialog').addEventListener('click', function(event) {
   if (event.target === this) {
       closePopup();
@@ -121,17 +103,7 @@ document.getElementById('popupDialog').addEventListener('click', function(event)
   popup.style.display = 'none';
 });
 
-function openPopupProfile() {
-  document.getElementById('popupProfile').style.display = 'flex';
-}
-
-function closePopupProfile(event) {
-  let popup = document.querySelector('.popup');
-  if (!event || event.target === document.getElementById('popupProfile')) {
-      document.getElementById('popupProfile').style.display = 'none';
-  }
-}
-
+//Переключение кнопок help
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".help-choose .choose-btn");
   const section = document.querySelector(".help-card-section");
@@ -150,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Переключение видимости карточек
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".serv-btn");
   const lists = [
@@ -160,14 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buttons.forEach((button, index) => {
       button.addEventListener("click", function () {
-          // Убираем активный класс у всех кнопок
           buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
-          // Добавляем активный класс к нажатой кнопке
           this.classList.add("haeder-btn-active");
 
-          // Скрываем все списки
           lists.forEach(list => list.classList.remove("services-card-display"));
-          // Показываем соответствующий список
           if (lists[index]) {
               lists[index].classList.add("services-card-display");
           }
