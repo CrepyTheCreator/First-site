@@ -106,21 +106,33 @@ document.getElementById('popupDialog').addEventListener('click', function(event)
 //Переключение кнопок help
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".help-choose .choose-btn");
-  const section = document.querySelector(".help-card-section");
+  const sections = {
+      "help-list-1": document.getElementById("help-list-1"),
+      "help-list-2": document.getElementById("help-list-2")
+  };
 
-  buttons.forEach(button => {
+  buttons.forEach((button, index) => {
       button.addEventListener("click", function () {
           buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
           this.classList.add("haeder-btn-active");
 
-          if (this.textContent.trim() === "По месту востребования") {
-              section.classList.add("vostreb");
-          } else {
-              section.classList.remove("vostreb");
-          }
+          const targetId = index === 0 ? "help-list-1" : "help-list-2";
+          const inactiveId = index === 0 ? "help-list-2" : "help-list-1";
+          const targetSection = sections[targetId];
+          const inactiveSection = sections[inactiveId];
+
+          inactiveSection.classList.remove("vostreb");
+          setTimeout(() => {
+              inactiveSection.classList.remove("visible");
+              targetSection.classList.add("visible");
+              setTimeout(() => {
+                  targetSection.classList.add("vostreb");
+              }, 200);
+          }, 200);
       });
   });
 });
+
 
 //Переключение видимости карточек
 document.addEventListener("DOMContentLoaded", function () {
@@ -136,9 +148,20 @@ document.addEventListener("DOMContentLoaded", function () {
           buttons.forEach(btn => btn.classList.remove("haeder-btn-active"));
           this.classList.add("haeder-btn-active");
 
-          lists.forEach(list => list.classList.remove("services-card-display"));
+          lists.forEach(list => {
+              list.classList.remove("services-card-display");
+              setTimeout(() => {
+                  list.classList.remove("visible");
+              }, 200);
+          });
+          
           if (lists[index]) {
-              lists[index].classList.add("services-card-display");
+              setTimeout(() => {
+                  lists[index].classList.add("visible");
+                  setTimeout(() => {
+                      lists[index].classList.add("services-card-display");
+                  }, 200);
+              }, 200);
           }
       });
   });

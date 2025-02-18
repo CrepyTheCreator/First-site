@@ -1238,13 +1238,15 @@
   .help-card-section {
     position: relative;
     display: flex;
-    gap: 100%;
-    transition: transform 0.6s ease;
-    transform: translateX(21.5%);
+    flex-direction: column;
+    align-items: center;
   }
 
   .help-card-list {
+    display: none;
     gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   .help-card {
@@ -1271,7 +1273,7 @@
   }
 
   .vostreb {
-    transform: translateX(-128.5%);
+    opacity: 1;
   }
 
   .services {
@@ -1294,6 +1296,8 @@
     gap: 0;
     padding-left: 0px;
     background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   .services-about {
@@ -1339,6 +1343,10 @@
   }
 
   .services-card-display {
+    opacity: 1;
+  }
+
+  .visible {
     display: flex;
   }
 

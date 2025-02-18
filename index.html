@@ -220,11 +220,11 @@
           <span class="help-subtitle">Не важно, для каких нужд вам нужна оценка – мы всегда рядом</span>
         </div>
         <div class="help-choose">
-          <button class="choose-btn help-btn haeder-btn-active">Нотариальные действия</button>
-          <button class="choose-btn help-btn">По месту востребования</button>
+          <button class="choose-btn help-btn haeder-btn-active" id="help-btn-1">Нотариальные действия</button>
+          <button class="choose-btn help-btn" id="help-btn-2">По месту востребования</button>
         </div>
         <div class="help-card-section">
-          <ul class="help-card-list">
+          <ul class="help-card-list visible vostreb" id="help-list-1">
             <li class="help-card">
               <img src="./images/Nasled.jpg" alt="" class="img-card-help">
               <div class="help-card-content">
@@ -255,7 +255,7 @@
               <button class="help-card-btn button-style"><span>Получить консультацию</span></button>
             </li>
           </ul>
-          <ul class="help-card-list">
+          <ul class="help-card-list" id="help-list-2">
             <li class="help-card">
               <img src="./images/ocenka-help.png" alt="" class="img-card-help">
               <div class="help-card-content">
@@ -358,7 +358,7 @@
           </div>
         </div>
         <div class="list-container">
-          <div class="list-services services-card-display" id="first-serv">
+          <div class="list-services visible services-card-display" id="first-serv">
             <button class="services-btn-list">
               <span>Недвижимое имущество</span>
               <img src="./svg/service-list.svg" alt="Иконка">
